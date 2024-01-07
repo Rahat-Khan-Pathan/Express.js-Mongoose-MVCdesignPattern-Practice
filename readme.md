@@ -9,7 +9,7 @@ This API provides functionality to manage student records, including adding, ret
 Run the following command
 
 ```bash
-nodemon start
+npm start
 ```
 
 ## Base URL
