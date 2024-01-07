@@ -18,10 +18,10 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 
 ## Endpoints
 
-### Get All Students
+### Get all Students
 
 -   **Endpoint:** `/student/get_all_students`
--   **Method:** GET
+-   **Method:** `GET`
 -   **Description:** Retrieve a list of all students.
 
 ### Add a Student
