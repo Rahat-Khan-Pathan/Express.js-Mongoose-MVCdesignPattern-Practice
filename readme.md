@@ -35,14 +35,14 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 -   **Method:** `POST`
 -   **Description:** Add a new student to the database.
 -   **Body:**
-    `json
+    ```json
     {
         "fullName": "Rahat Khan",
         "class": 11,
         "roll": 55,
         "section": "C"
     }
-    `
+    ```
     <br><br>
 
 ### Get Student by Roll and Class
