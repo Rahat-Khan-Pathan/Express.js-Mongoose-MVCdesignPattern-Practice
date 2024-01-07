@@ -3,6 +3,7 @@
 ## Introduction
 
 This API provides functionality to manage student records, including adding, retrieving, updating, and deleting student information, using Express.js, Mongoose, MongoDB, and the MVC design pattern.
+<br><br>
 
 ## How To Run
 
@@ -12,9 +13,12 @@ Run the following command
 npm start
 ```
 
+<br><br>
+
 ## Base URL
 
 All endpoints are relative to the base URL: `http://localhost:5000`
+<br><br>
 
 ## Endpoints
 
@@ -32,13 +36,13 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 -   **Description:** Add a new student to the database.
 -   **Body:**
     `json
-    {
-        "fullName": "Rahat Khan",
-        "class": 11,
-        "roll": 55,
-        "section": "C"
-    }
-    `
+{
+    "fullName": "Rahat Khan",
+    "class": 11,
+    "roll": 55,
+    "section": "C"
+}
+`
     <br><br>
 
 ### Get Student by Roll and Class
@@ -55,13 +59,13 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 -   **Description:** Update a student's information by ID.
 -   **Body:**
     `json
-    {
-        "fullName": "Rahat Khan",
-        "class": 11,
-        "roll": 55,
-        "section": "C"
-    }
-    `
+{
+    "fullName": "Rahat Khan",
+    "class": 11,
+    "roll": 55,
+    "section": "C"
+}
+`
     <br><br>
 
 ### Get Student by ID
