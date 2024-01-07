@@ -13,7 +13,7 @@ Run the following command
 npm start
 ```
 
-<br><br>
+<br>
 
 ## Base URL
 
