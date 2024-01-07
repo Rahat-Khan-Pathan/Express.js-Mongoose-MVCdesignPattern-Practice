@@ -36,13 +36,13 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 -   **Description:** Add a new student to the database.
 -   **Body:**
     `json
-{
-    "fullName": "Rahat Khan",
-    "class": 11,
-    "roll": 55,
-    "section": "C"
-}
-`
+    {
+        "fullName": "Rahat Khan",
+        "class": 11,
+        "roll": 55,
+        "section": "C"
+    }
+    `
     <br><br>
 
 ### Get Student by Roll and Class
@@ -58,14 +58,14 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 -   **Method:** `PUT`
 -   **Description:** Update a student's information by ID.
 -   **Body:**
-    `json
-{
-    "fullName": "Rahat Khan",
-    "class": 11,
-    "roll": 55,
-    "section": "C"
-}
-`
+    ```json
+    {
+        "fullName": "Rahat Khan",
+        "class": 11,
+        "roll": 55,
+        "section": "C"
+    }
+    ```
     <br><br>
 
 ### Get Student by ID
