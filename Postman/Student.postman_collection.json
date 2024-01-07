@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "658de922-7b8d-473e-a635-4e0aa39114ff",
+		"name": "Student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18395972"
+	},
+	"item": [
+		{
+			"name": "Get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/get_all_students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"get_all_students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\":\"Refat Khan\",\r\n    \"class\": 11,\r\n    \"roll\": 55,\r\n    \"section\": \"C\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/student/add_student",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"add_student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get student by roll and class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/get_student_by_roll_class/91/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"get_student_by_roll_class",
+						"91",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get student by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/get_student_by_id/659ad7d2154c288ab69f3ebe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"get_student_by_id",
+						"659ad7d2154c288ab69f3ebe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\":\"Refat Khan\",\r\n    \"class\": 11,\r\n    \"roll\": 55,\r\n    \"section\": \"C\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/student/update_student_by_id/659ae2e4c1edcfdd7887ea7f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"update_student_by_id",
+						"659ae2e4c1edcfdd7887ea7f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/delete_student_by_id/659ae03f3dd8bf97c137ffbc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"delete_student_by_id",
+						"659ae03f3dd8bf97c137ffbc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student by roll and class",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/delete_student_by_roll_class/55/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"delete_student_by_roll_class",
+						"55",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
