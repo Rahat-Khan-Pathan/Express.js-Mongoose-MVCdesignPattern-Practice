@@ -29,6 +29,15 @@ const getStudentByID = async (req, res) => {
     }
 };
 
+const getStudentByIDInternal = async (studentRef) => {
+    try {
+        const student = await Student.findOne({ _id: studentRef });
+        return { student, error: null };
+    } catch (error) {
+        return { student: null, error };
+    }
+};
+
 const addStudent = async (req, res) => {
     try {
         const newStudent = await Student.create(req.body);
@@ -45,9 +54,10 @@ const updateStudentByID = async (req, res) => {
     try {
         const { id } = req.params;
         const updateData = req.body;
+        updateData.updatedDate = Date.now();
         const updatedStudent = await Student.findOneAndUpdate(
             { _id: id },
-            { ...updateData, updatedDate: Date.now() },
+            updateData,
             {
                 new: true,
                 runValidators: true,
@@ -61,6 +71,22 @@ const updateStudentByID = async (req, res) => {
         } else {
             res.status(404).json({ message: "Student not found" });
         }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+};
+const updateStudentByIDInternal = async (studentId, updateData) => {
+    try {
+        updateData.updatedDate = Date.now();
+        const updatedStudent = await Student.findOneAndUpdate(
+            { _id: studentId },
+            updateData,
+            {
+                new: true,
+                runValidators: true,
+            }
+        );
+        return updatedStudent;
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
@@ -111,4 +137,6 @@ module.exports = {
     getStudentByID,
     deleteStudentByRollAndClass,
     deleteStudentByID,
+    getStudentByIDInternal,
+    updateStudentByIDInternal,
 };

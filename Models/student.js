@@ -9,6 +9,17 @@ const studentSchema = new Schema(
         section: { type: String, required: true },
         createdDate: { type: Date, default: Date.now },
         updatedDate: { type: Date, default: Date.now },
+        marksRef: {
+            type: [Schema.Types.ObjectId],
+            default: [],
+            validate: {
+                validator: (array) =>
+                    array.every((value) =>
+                        mongoose.Types.ObjectId.isValid(value)
+                    ),
+                message: "Invalid ObjectId in the marksRef array.",
+            },
+        },
     },
     { versionKey: false }
 );

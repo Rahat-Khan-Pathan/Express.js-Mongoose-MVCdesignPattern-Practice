@@ -89,6 +89,31 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 -   **Description:** Delete a student by roll and class.
     <br><br>
 
+### Add Marks
+
+-   **Endpoint:** `/marks/add_marks`
+-   **Method:** `POST`
+-   **Description:** Add new marks to the database. Add reference of the marks to student collection.
+-   **Body:**
+    ```json
+    {
+        "marks": 65,
+        "term": "Final",
+        "subject": "Bangla",
+        "studentClass": 9,
+        "studentRoll": 29,
+        "studentRef": "659b8fe9a07f6fc0ba3b5651"
+    }
+    ```
+    <br><br>
+
+### Delete Marks by ID
+
+-   **Endpoint:** `/marks/delete_marks_by_id/:id`
+-   **Method:** `DELETE`
+-   **Description:** Delete marks by id and remove the reference from the student collection.
+    <br><br>
+
 ## Notes
 
 -   Ensure to replace `:id`, `:roll`, and `:class` with the actual ID, roll number, and class values respectively when making requests. You can see the postman documentation for more clarifications.

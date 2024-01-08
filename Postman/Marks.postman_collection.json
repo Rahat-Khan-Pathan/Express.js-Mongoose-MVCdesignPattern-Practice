@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "3a338e47-5306-4eb9-b379-7492222baac0",
+		"name": "Marks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18395972"
+	},
+	"item": [
+		{
+			"name": "Add marks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"marks\": 65,\r\n    \"term\": \"Final\",\r\n    \"subject\": \"Bangla\",\r\n    \"studentClass\": 9,\r\n    \"studentRoll\": 29,\r\n    \"studentRef\": \"659b8fe9a07f6fc0ba3b5651\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/marks/add_marks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"marks",
+						"add_marks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete marks by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/marks/delete_marks_by_id/659ba61118d98830e7805686",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"marks",
+						"delete_marks_by_id",
+						"659ba61118d98830e7805686"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
