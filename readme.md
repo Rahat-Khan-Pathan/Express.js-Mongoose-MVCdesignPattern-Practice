@@ -91,29 +91,42 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 
 ### Add Marks
 
--   **Endpoint:** `/marks/add_marks`
+-   **Endpoint:** `/student/add_marks`
 -   **Method:** `POST`
 -   **Valid Terms:** `First`, `Second`, `Final`
 -   **Valid Subjects:** `Bangla`, `English`, `Math`
--   **Description:** Add new marks to the database. Add reference of the marks to student collection.
+-   **Description:** Add marks to the student collection.
 -   **Body:**
     ```json
     {
-        "marks": 65,
-        "term": "Final",
-        "subject": "Bangla",
-        "studentClass": 9,
-        "studentRoll": 29,
-        "studentRef": "659b8fe9a07f6fc0ba3b5651"
+        "marks": 10,
+        "roll": 91,
+        "class": 11,
+        "term": "First",
+        "subject": "Bangla"
     }
     ```
     <br>
 
-### Delete Marks by ID
+### Get All Students Data with Marks
 
--   **Endpoint:** `/marks/delete_marks_by_id/:id`
--   **Method:** `DELETE`
--   **Description:** Delete marks by id and remove the reference from the student collection.
+-   **Endpoint:** `/student/get_all_students_marks`
+-   **Method:** `GET`
+-   **Description:** Get all students data along with their marks in formatted way.
+    <br><br>
+
+### Get One Student's Data with Marks by ID
+
+-   **Endpoint:** `/student/get_student_marks_by_id/:id`
+-   **Method:** `GET`
+-   **Description:** Get one student's data along with his/her marks in formatted way.
+    <br><br>
+
+### Get One Student's Data with Marks by Roll and Class
+
+-   **Endpoint:** `/student/get_student_marks_by_roll_class/:roll/:class`
+-   **Method:** `GET`
+-   **Description:** Get one student's data along with his/her marks in formatted way.
     <br><br>
 
 ## Notes

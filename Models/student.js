@@ -1,6 +1,17 @@
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
+// Define marksSchema with validation
+const marksSchema = new Schema(
+    {
+        marks: { type: Number, min: 0, max: 100, required: true },
+        term: { type: String, enum: ["First", "Second", "Final"] },
+        subject: { type: String, enum: ["Bangla", "English", "Math"] },
+    },
+    { versionKey: false, _id: false }
+);
+
+// Define studentSchema with marks array
 const studentSchema = new Schema(
     {
         fullName: { type: String, required: true },
@@ -9,20 +20,33 @@ const studentSchema = new Schema(
         section: { type: String, required: true },
         createdDate: { type: Date, default: Date.now },
         updatedDate: { type: Date, default: Date.now },
-        marksRef: {
-            type: [Schema.Types.ObjectId],
+        marksArray: {
+            type: [marksSchema],
             default: [],
-            validate: {
-                validator: (array) =>
-                    array.every((value) =>
-                        mongoose.Types.ObjectId.isValid(value)
-                    ),
-                message: "Invalid ObjectId in the marksRef array.",
-            },
         },
     },
     { versionKey: false }
 );
+
+studentSchema.pre("save", function (next) {
+    const marksArray = this.marks;
+    if (!marksArray) return next();
+    const isValidMarksArray = marksArray.every((mark) => {
+        return (
+            mark.marks >= 0 &&
+            mark.marks <= 100 &&
+            typeof mark.term === "string" &&
+            ["First", "Second", "Final"].includes(mark.term) &&
+            typeof mark.subject === "string" &&
+            ["Bangla", "English", "Math"].includes(mark.subject)
+        );
+    });
+
+    if (!isValidMarksArray) {
+        return next(new Error("Invalid data in the marks array"));
+    }
+    next();
+});
 
 const Student = mongoose.model("Student", studentSchema);
 

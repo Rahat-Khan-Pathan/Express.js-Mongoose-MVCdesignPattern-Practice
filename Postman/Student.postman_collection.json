@@ -170,6 +170,98 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Add marks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"marks\": 100,\r\n    \"roll\": 29,\r\n    \"class\": 9,\r\n    \"term\": \"Final\",\r\n    \"subject\":\"Math\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/student/add_marks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"add_marks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all students with marks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/get_all_students_marks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"get_all_students_marks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get student with marks by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/get_student_marks_by_id/659c1c79f3fddbfec56c7cc8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"get_student_marks_by_id",
+						"659c1c79f3fddbfec56c7cc8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get student with marks by roll and class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/student/get_student_marks_by_roll_class/29/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"student",
+						"get_student_marks_by_roll_class",
+						"29",
+						"9"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
