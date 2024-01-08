@@ -93,6 +93,8 @@ All endpoints are relative to the base URL: `http://localhost:5000`
 
 -   **Endpoint:** `/marks/add_marks`
 -   **Method:** `POST`
+-   **Valid Terms:** `First`, `Second`, `Final`
+-   **Valid Subjects:** `Bangla`, `English`, `Math`
 -   **Description:** Add new marks to the database. Add reference of the marks to student collection.
 -   **Body:**
     ```json
