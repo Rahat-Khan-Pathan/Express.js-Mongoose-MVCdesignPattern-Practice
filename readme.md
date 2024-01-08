@@ -43,7 +43,7 @@ All endpoints are relative to the base URL: `http://localhost:5000`
         "section": "C"
     }
     ```
-    <br><br>
+    <br>
 
 ### Get Student by Roll and Class
 
@@ -66,7 +66,7 @@ All endpoints are relative to the base URL: `http://localhost:5000`
         "section": "C"
     }
     ```
-    <br><br>
+    <br>
 
 ### Get Student by ID
 
@@ -105,7 +105,7 @@ All endpoints are relative to the base URL: `http://localhost:5000`
         "studentRef": "659b8fe9a07f6fc0ba3b5651"
     }
     ```
-    <br><br>
+    <br>
 
 ### Delete Marks by ID
 
